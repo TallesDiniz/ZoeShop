@@ -12,8 +12,8 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   { label: "Home", to: "/", icon: <HiOutlineHome size={16} /> },
-  { label: "Shop", to: "/", icon: <HiOutlineShoppingBag size={16} /> },
-  { label: "About", to: "/about", icon: <HiOutlineInformationCircle size={16} /> },
+  { label: "Compre", to: "/", icon: <HiOutlineShoppingBag size={16} /> },
+  { label: "Sobre", to: "/sobre", icon: <HiOutlineInformationCircle size={16} /> },
 ];
 
 export function Header() {
@@ -32,7 +32,7 @@ export function Header() {
         >
           <PiPawPrintFill
             size={28}
-            className="text-stone-800 group-hover:text-amber-600 transition-colors"
+            className="text-brown-dark group-hover:text-brown-light transition-colors"
           />
           <span className="font-serif text-2xl font-bold text-stone-800 tracking-tight">
             Zoe Shop
@@ -62,12 +62,12 @@ export function Header() {
         {/* Cart Button */}
         <button
           onClick={() => navigate("/cart")}
-          className="relative flex items-center gap-2 bg-stone-800 hover:bg-stone-700 text-white text-sm font-medium px-5 py-2.5 rounded-full transition-colors"
+          className="relative flex items-center gap-2 bg-brown-dark hover:bg-brown text-white text-sm font-medium px-5 py-2.5 rounded-full transition-colors"
         >
           <HiOutlineShoppingCart size={18} />
           Cart
           {cartCount > 0 && (
-            <span className="absolute -top-1.5 -right-1.5 bg-amber-600 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">
+            <span className="absolute -top-1.5 -right-1.5 bg-brown-light text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">
               {cartCount}
             </span>
           )}
