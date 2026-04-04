@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@theme {
+  --color-brown-light: #C49A6C;
+  --color-brown: #8B5E3C;
+  --color-brown-dark: #5C3A1E;
+  --color-cream: #FDFAF6;
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "DM Sans", sans-serif;
+}
