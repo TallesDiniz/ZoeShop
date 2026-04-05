@@ -39,7 +39,6 @@ ZoeShop is a full-featured pet shop e-commerce application built as a front-end 
 
 ## ✨ Features
 
-- 🛍️ **Product catalog** with category filtering
 - 🛒 **Shopping cart** with quantity controls and real-time totals
 - 💳 **Checkout modal** with delivery and payment form validation
 - 🔔 **Toast notifications** for cart actions and order confirmation
