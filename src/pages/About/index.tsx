@@ -86,13 +86,13 @@ export function AboutPage() {
     <div className="bg-cream min-h-screen">
 
       {/* Hero */}
-      <section className="relative bg-brown-dark text-white py-24 px-8 text-center overflow-hidden">
+      <section className="relative bg-brown-dark text-white py-16 md:py-24 px-6 md:px-8 text-center overflow-hidden">
         <div className="absolute -top-[50] left-1/2 -translate-x-1/2 text-[180px] opacity-5 pointer-events-none select-none">
           🐾
         </div>
         <div className="relative z-10">
           <p className="text-brown-light text-xs uppercase tracking-widest mb-4">Quem somos</p>
-          <h1 className="font-serif text-5xl font-bold mb-4">Feito para quem<br />ama seu pet</h1>
+          <h1 className="font-serif text-3xl md:text-5xl font-bold mb-4">Feito para quem<br />ama seu pet</h1>
           <p className="text-brown-light/80 text-base max-w-xl mx-auto leading-relaxed">
             Desde 2022 levando produtos de qualidade, saúde e felicidade para pets e seus tutores em todo o Brasil.
           </p>
@@ -101,7 +101,7 @@ export function AboutPage() {
 
       {/* Stats */}
       <section className="max-w-4xl mx-auto px-8 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {stats.map((stat) => (
             <div key={stat.label} className="bg-white border border-brown-light/30 rounded-2xl p-6 text-center">
               <p className="font-serif text-4xl font-bold text-brown-dark mb-1">{stat.value}</p>
@@ -113,7 +113,7 @@ export function AboutPage() {
 
       {/* Brand Story */}
       <section className="max-w-4xl mx-auto px-8 pb-16">
-        <div className="bg-white border border-brown-light/30 rounded-2xl p-10 flex flex-col md:flex-row gap-10 items-center">
+        <div className="bg-white border border-brown-light/30 rounded-2xl p-6 md:p-10 flex flex-col md:flex-row gap-6 md:gap-10 items-center">
           <div className="text-[100px] shrink-0 select-none">🐾</div>
           <div>
             <p className="text-xs text-brown-light uppercase tracking-widest mb-2">Nossa história</p>
@@ -157,7 +157,7 @@ export function AboutPage() {
         <h2 className="font-serif text-3xl font-semibold text-brown-dark text-center mb-10">
           Nosso time
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {team.map((member) => (
             <div key={member.name} className="bg-white border border-brown-light/30 rounded-2xl p-6 text-center">
               <div className="w-16 h-16 rounded-full bg-cream border border-brown-light/30 flex items-center justify-center text-4xl mx-auto mb-4">
@@ -234,7 +234,7 @@ export function AboutPage() {
           <p className="text-brown-light/70 text-sm mb-8 leading-relaxed">
             Receba promoções exclusivas, dicas para seu pet e lançamentos em primeira mão.
           </p>
-          <div className="flex gap-3">
+          <div className="flex flex-col sm:flex-row gap-3">
             <input
               type="email"
               value={email}
@@ -244,7 +244,7 @@ export function AboutPage() {
             />
             <button
               onClick={handleNewsletter}
-              className="bg-brown-light hover:bg-brown text-white px-6 py-3 rounded-full font-medium text-sm transition-colors shrink-0"
+              className="w-full sm:w-auto bg-brown-light hover:bg-brown text-white px-6 py-3 rounded-full font-medium text-sm transition-colors shrink-0"
             >
               Inscrever
             </button>
@@ -258,7 +258,7 @@ export function AboutPage() {
         <h2 className="font-serif text-3xl font-semibold text-brown-dark text-center mb-10">
           Nossa loja
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
           <div className="bg-white border border-brown-light/30 rounded-2xl p-6 text-center">
             <span className="text-3xl mb-3 block">📍</span>
             <h3 className="font-serif text-base font-semibold text-brown-dark mb-1">Endereço</h3>

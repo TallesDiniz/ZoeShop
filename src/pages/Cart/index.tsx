@@ -31,24 +31,24 @@ export function CartPage() {
 
   return (
     <div className="bg-cream min-h-screen">
-      <div className="max-w-4xl mx-auto px-8 py-12">
+      <div className="max-w-4xl mx-auto px-4 md:px-8 py-8 md:py-12">
 
         {/* Title */}
-        <h1 className="font-serif text-4xl font-bold text-brown-dark mb-8">
+        <h1 className="font-serif text-3xl md:text-4xl font-bold text-brown-dark mb-6 md:mb-8">
           Seu Carrinho
         </h1>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6 md:gap-8 items-start">
 
           {/* Cart Items */}
-          <div className="lg:col-span-2 flex flex-col gap-4">
+          <div className="lg:col-span-2 flex flex-col gap-3 md:gap-4">
             {items.map((item) => (
               <div
                 key={item.id}
-                className="bg-white border border-brown-light/30 rounded-2xl p-5 flex items-center gap-4"
+                className="bg-white border border-brown-light/30 rounded-2xl p-4 md:p-5 flex items-center gap md:gap-4"
               >
                 {/* Image */}
-                <div className="w-16 h-16 rounded-xl bg-cream overflow-hidden shrink-0">
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-cream overflow-hidden shrink-0">
                   <img
                     src={item.cover}
                     alt={item.title}
@@ -57,34 +57,34 @@ export function CartPage() {
                 </div>
 
                 {/* Info */}
-                <div className="flex-1">
-                  <p className="font-serif text-base font-semibold text-brown-dark">
+                <div className="flex-1 min-w-0">
+                  <p className="font-serif text-sm md:text-base font-semibold text-brown-dark truncate">
                     {item.title}
                   </p>
                  
 
                   {/* Qty controls */}
-                  <div className="flex items-center gap-3 mt-2">
+                  <div className="flex items-center gap-2 md:gap-3 mt-2">
                     <button
                       onClick={() => changeQty(item.id, -1)}
-                      className="w-7 h-7 rounded-full border border-brown-light/40 flex items-center justify-center text-brown hover:border-brown-dark transition-colors"
+                      className="w-6 h-6 md:w-7 md:h-7 rounded-full border border-brown-light/40 flex items-center justify-center text-brown hover:border-brown-dark transition-colors"
                     >
-                      <HiOutlineMinus size={13} />
+                      <HiOutlineMinus size={12} />
                     </button>
                     <span className="text-sm font-medium w-4 text-center text-brown-dark">
                       {item.qty}
                     </span>
                     <button
                       onClick={() => changeQty(item.id, 1)}
-                      className="w-7 h-7 rounded-full border border-brown-light/40 flex items-center justify-center text-brown hover:border-brown-dark transition-colors"
+                      className="w-6 h-6 md:w-7 md:h-7 rounded-full border border-brown-light/40 flex items-center justify-center text-brown hover:border-brown-dark transition-colors"
                     >
-                      <HiOutlinePlus size={13} />
+                      <HiOutlinePlus size={12} />
                     </button>
                   </div>
                 </div>
 
                 {/* Price */}
-                <p className="text-base font-medium text-brown-dark shrink-0">
+                <p className="text-sm md:text-base font-medium text-brown-dark shrink-0">
                   {(item.price * item.qty).toLocaleString('pt-BR', {
                     style: 'currency',
                     currency: 'BRL',
@@ -97,7 +97,7 @@ export function CartPage() {
                   className="text-brown-light/50 hover:text-brown-dark transition-colors ml-1"
                   
                >
-                  <HiOutlineTrash size={16} />
+                  <HiOutlineTrash size={15} />
                 </button>
 
               </div>
@@ -105,8 +105,8 @@ export function CartPage() {
           </div>
 
           {/* Order Summary */}
-          <div className="bg-white border border-brown-light/30 rounded-2xl p-6 sticky top-24">
-            <h2 className="font-serif text-xl font-semibold text-brown-dark mb-5">
+          <div className="w-full bg-white border border-brown-light/30 rounded-2xl p-5 md:p-6 lg:sticky lg:top-24">
+            <h2 className="font-serif text-lg md:text-xl font-semibold text-brown-dark mb-4 md:mb-5">
               Resumo do Pedido
             </h2>
 
@@ -150,7 +150,7 @@ export function CartPage() {
 
             <button
             onClick={() => setIsModalOpen(true)} 
-            className="w-full bg-brown-dark hover:bg-brown text-white py-3 rounded-full font-medium transition-colors">
+            className="w-full bg-brown-dark hover:bg-brown text-white py-3 rounded-full font-medium transition-colors text-sm md:text-base">
               Finalizar Pedido →
             </button>
 

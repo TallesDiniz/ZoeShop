@@ -12,7 +12,7 @@ export function Footer() {
 
     return(
 
-      <footer className="bg-stone-800 py-10 px-8 mt-8">
+      <footer className="bg-stone-800 py-10 px-6 mt-8">
         <div className="max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
           {trustBadges.map((badge) => (
             <div key={badge.label} className="flex flex-col items-center text-center gap-2">

@@ -128,7 +128,7 @@ export function CheckoutModal({ isOpen, onClose, total }: CheckoutModalProps) {
       />
 
       {/* Modal */}
-      <div className="relative bg-cream rounded-3xl w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl">
+      <div className="relative bg-cream rounded-none md:rounded-3xl w-full md:max-w-2xl h-full md:h-auto md:max-h-[90vh] overflow-y-auto shadow-2xl">
 
         {/* Header */}
         <div className="sticky top-0 bg-cream border-b border-brown-light/20 px-8 py-5 flex items-center justify-between rounded-t-3xl z-10">
