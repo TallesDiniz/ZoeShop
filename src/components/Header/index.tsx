@@ -12,8 +12,8 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   { label: 'Home',  to: '/',       icon: <HiOutlineHome size={16} /> },
-  { label: 'Shop',  to: '/',       icon: <HiOutlineShoppingBag size={16} /> },
-  { label: 'About', to: '/about',  icon: <HiOutlineInformationCircle size={16} /> },
+  { label: 'Compre',  to: '/',       icon: <HiOutlineShoppingBag size={16} /> },
+  { label: 'Sobre', to: '/sobre',  icon: <HiOutlineInformationCircle size={16} /> },
 ]
 
 export function Header() {
@@ -32,7 +32,7 @@ export function Header() {
         >
           <PiPawPrintFill size={26} className="text-brown-dark group-hover:text-brown-light transition-colors" />
           <span className="font-serif text-xl font-bold text-brown-dark tracking-tight">
-            Pawsome
+            Zoe Shop
           </span>
         </button>
 
@@ -74,6 +74,7 @@ export function Header() {
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden w-9 h-9 flex items-center justify-center rounded-full border border-brown-light/30 text-brown-dark"
+            
           >
             {menuOpen ? <HiOutlineXMark size={20} /> : <HiOutlineBars3 size={20} />}
           </button>
